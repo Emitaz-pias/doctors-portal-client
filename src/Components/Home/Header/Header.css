@@ -1,0 +1,13 @@
+.headerContainer {
+  height: 700px;
+  position: relative;
+}
+.headerContainer ::after {
+  height: 700px;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  content: " ";
+  background-color: #3a4256;
+}
