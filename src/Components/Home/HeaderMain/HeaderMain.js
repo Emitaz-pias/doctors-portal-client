@@ -4,7 +4,7 @@ import chairBg from "../../../images/chairbg.png";
 
 const HeaderMain = () => {
   return (
-    <main className="row">
+    <main className="row w-100">
       <div className="col-md-4 ofset-md-1">
         <h1>
           Your New Smile <br /> Starts Here
