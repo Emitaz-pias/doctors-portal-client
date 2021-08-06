@@ -2,9 +2,10 @@
   padding: 0 5px;
 }
 .info-container {
-  height: 120px;
+  height: 100px;
+
   color: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 2px;
 }
 .info-primary {
