@@ -1,0 +1,23 @@
+.appointment {
+  background-image: url("../../../images/appiontemntbg.png");
+  background-color: #3a4256;
+  height: 420px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.appointment::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #3a4256;
+  opacity: 0.6;
+  top: 0;
+}
+.appointment img {
+  height: 550px;
+  transform: translateY(-130px);
+}

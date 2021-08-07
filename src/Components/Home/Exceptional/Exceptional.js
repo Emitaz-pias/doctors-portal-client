@@ -6,7 +6,7 @@ const Exceptional = () => {
     <section className="featuresServices mt-5 pt-5">
       <div className="container d-flex justify-content-center mb-5">
         <div className="row mb-5 pb-5 w-75">
-          <div className="col-md-5 mb-4 ">
+          <div className="col-md-5 mb-4">
             <img src={exceptional} alt="" className="img-fluid w-100" />
           </div>
           <div className="col-md-7 mt-3">

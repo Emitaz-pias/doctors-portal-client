@@ -4,8 +4,8 @@ import chairBg from "../../../images/chairbg.png";
 
 const HeaderMain = () => {
   return (
-    <main className="row w-100">
-      <div className="col-md-4 ofset-md-1">
+    <main className="row w-75">
+      <div className="col-md-4 offset-md-1">
         <h1>
           Your New Smile <br /> Starts Here
         </h1>
@@ -13,7 +13,12 @@ const HeaderMain = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
           soluta, ducimus fugiat harum officia amet.
         </p>
-        <button className="btn  btn-primary">GET APPOINTMENT</button>
+        <button
+          style={{ backgroundColor: "#16D2C3", border: "none" }}
+          className="btn  btn-primary"
+        >
+          GET APPOINTMENT
+        </button>
       </div>
       <div className="col-md-6">
         <img src={chair} alt="" className="fluid"></img>
