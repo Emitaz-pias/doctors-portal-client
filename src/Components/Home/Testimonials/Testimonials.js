@@ -30,9 +30,9 @@ const testimonialsData = [
 
 const Testimonials = () => {
   return (
-    <section className="testimonials m-5 ">
-      <div className="container ">
-        <div className="section-header">
+    <section className="testimonialContainer mt-5 pb-4 ">
+      <div className="container testimonials  ">
+        <div className="testimonial-header">
           <h4 style={{ color: "#1cc7c1" }}>Testimonials</h4>
           <h1>
             What Our Patients <br /> Says

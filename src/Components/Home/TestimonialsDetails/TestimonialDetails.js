@@ -3,7 +3,10 @@ import React from "react";
 const TestimonialDetails = ({ testimonials }) => {
   return (
     <div className="col-md-3 ps-5 ms-5">
-      <div class="card text-center" style={{ width: "22rem", height: "22rem" }}>
+      <div
+        class="card p-2 text-center"
+        style={{ width: "22rem", height: "20rem" }}
+      >
         <div class="card-body">
           <p class="card-text text-secondary">{testimonials.qoute}</p>
           <div className="d-flex justify-content-around align-items-center mt-5 pt-5">

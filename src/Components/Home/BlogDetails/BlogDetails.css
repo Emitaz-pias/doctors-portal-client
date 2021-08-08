@@ -1,8 +1,8 @@
-.testimonial-header {
-  height: 150px;
+.cardHover:hover {
+  background-color: #1cc7ca;
+  color: white;
   background-image: url("../../../images/qoute.png");
-  opacity: 0.7;
   background-repeat: no-repeat;
-  background-position: right top;
   background-size: 10em;
+  background-position: right top;
 }
