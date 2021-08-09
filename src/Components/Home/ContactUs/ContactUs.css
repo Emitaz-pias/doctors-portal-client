@@ -1,5 +1,5 @@
 .contactUs {
-  height: 100vh;
+  height: 80vh;
   background-image: url("../../../images/appiontemntbg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,7 +9,7 @@
 .contactUs ::before {
   content: "";
   position: absolute;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: block;
   background-color: #373f52;
