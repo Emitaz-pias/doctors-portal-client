@@ -1,0 +1,20 @@
+.contactUs {
+  height: 100vh;
+  background-image: url("../../../images/appiontemntbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.contactUs ::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: block;
+  background-color: #373f52;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
