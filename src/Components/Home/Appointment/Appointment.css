@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 1;
 }
 .appointment::before {
   content: "";
@@ -16,6 +17,7 @@
   background: #3a4256;
   opacity: 0.6;
   top: 0;
+  z-index: -1;
 }
 .appointment img {
   height: 550px;

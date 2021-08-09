@@ -7,7 +7,7 @@ const ContactUs = () => {
         <div>
           <h5
             style={{
-              color: " #1cc7c1",
+              color: " #14D1D0",
             }}
             className="text-center pt-5 fw-bold "
           >
@@ -15,28 +15,44 @@ const ContactUs = () => {
           </h5>
           <h1 className="text-center text-white">Always Connect With Us</h1>
         </div>
-      </div>
-      <div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">
-            Example textarea
-          </label>
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
+        <div className="mt-5 pt-5 d-flex justify-content-center">
+          <div className="w-50">
+            <form action="">
+              <input
+                type="text"
+                class="form-control form-control-lg form mb-3"
+                id="exampleFormControlInput1"
+                placeholder="Email Address *"
+              />
+
+              <input
+                type="text"
+                class="form-control  form-control-lg mb-3"
+                id="exampleFormControlInput1"
+                placeholder="Subject *"
+              />
+
+              <textarea
+                class="form-control  form-control-lg mb-3"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                placeholder="Your Message *"
+              ></textarea>
+              <div className="d-flex justify-content-center mt-3">
+                <input
+                  style={{
+                    backgroundColor: "#14D1D0",
+                    color: " white",
+                    height: "3em",
+                    width: "10em",
+                  }}
+                  type="submit"
+                  value="Submit"
+                  className="btn fw-bold text-uppercase"
+                />
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>

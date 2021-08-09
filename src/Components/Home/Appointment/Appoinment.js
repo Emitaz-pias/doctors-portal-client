@@ -10,7 +10,9 @@ const Appoinment = () => {
             <img src={doctor} alt="" />
           </div>
           <div className="col-md-7 text-white py-5">
-            <h5 className="text-primary text-uppercase">Appointment</h5>
+            <h5 style={{ color: " #14D1D0" }} className=" text-uppercase">
+              Appointment
+            </h5>
             <h1 className="">
               Make An Appointment <br />
               Today
@@ -19,7 +21,12 @@ const Appoinment = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Inventore, harum.
             </p>
-            <button className="btn btn-primary">Learn More</button>
+            <button
+              style={{ backgroundColor: "#14D1D0", color: "#FFFFFF" }}
+              className="btn"
+            >
+              Learn More
+            </button>
           </div>
         </div>
       </div>
