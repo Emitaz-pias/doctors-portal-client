@@ -1,6 +1,7 @@
 import React from "react";
+import AppointmentModal from "../AppointmentModal/AppointmentModal";
 
-const BookingsCard = ({ booking }) => {
+const BookingsCard = ({ booking, openModal, closeModal }) => {
   return (
     <div className=" col-md-4 mb-3">
       <div class="card p-2 mb-5">
@@ -16,6 +17,7 @@ const BookingsCard = ({ booking }) => {
           >
             Book Appointment
           </button>
+          <AppointmentModal openModal={openModal} closeModal={closeModal} />
         </div>
       </div>
     </div>
