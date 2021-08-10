@@ -1,13 +1,13 @@
 import React from "react";
-import Appoinment from "../Appointment/Appoinment";
 import Blogs from "../Blogs/Blogs";
 import ContactUs from "../ContactUs/ContactUs";
 import Doctors from "../Doctors/Doctors";
 import Exceptional from "../Exceptional/Exceptional";
-import Footer from "../Footer/Footer";
+import Footer from "../../Shared/Footer/Footer";
 import Header from "../Header/Header";
 import Services from "../Services/Services";
 import Testimonials from "../Testimonials/Testimonials";
+import MakeAppoinment from "../MakeAppointment/MakeAppointment";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       <Header />
       <Services />
       <Exceptional />
-      <Appoinment />
+      <MakeAppoinment />
       <Testimonials />
       <Blogs />
       <Doctors />
