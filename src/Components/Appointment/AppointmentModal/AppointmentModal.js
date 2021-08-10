@@ -1,8 +1,7 @@
 import React from "react";
-import { useState } from "react";
-import Modal from "react-modal";
 
-Modal.setAppElement("#root");
+import Modal from "react-modal";
+import { useForm } from "react-hook-form";
 
 const customStyles = {
   content: {
@@ -14,36 +13,59 @@ const customStyles = {
     transform: "translate(-50%, -50%)",
   },
 };
-const AppointmentModal = ({ openModal, closeModal }) => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+Modal.setAppElement("#root");
 
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
+const AppointmentModal = ({ modalIsOpen, closeModal, bookingName }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+  console.log(errors);
 
   return (
-    <Modal
-      isOpen={modalIsOpen}
-      onRequestClose={openModal}
-      style={customStyles}
-      contentLabel="Example Modal"
-    >
-      <button onClick={closeModal}>close</button>
-      <h2>Hello</h2>
-      <button onClick={closeModal}>close</button>
-      <div>I am a modal</div>
-      <form>
-        <input />
-        <button>tab navigation</button>
-        <button>stays</button>
-        <button>inside</button>
-        <button>the modal</button>
-      </form>
-    </Modal>
+    <div>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h2 style={{ color: " #1cc7c1" }} classname="text-center">
+          {bookingName}
+        </h2>
+
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            classname="form-control"
+            type="time"
+            placeholder="Select Time"
+            {...register("Select Time", { required: true, maxLength: 80 })}
+          />{" "}
+          <br />
+          <input
+            type="text"
+            placeholder="Your Name"
+            {...register("Your Name", { required: true, maxLength: 100 })}
+          />{" "}
+          <br />
+          <input
+            type="tel"
+            placeholder="Mobile number"
+            {...register("Mobile number", { required: true, maxLength: 12 })}
+          />{" "}
+          <br />
+          <input
+            type="datetime"
+            placeholder="mm/dd/yy"
+            {...register("mm/dd/yy", { required: true })}
+          />
+          <br />
+          <input onClick={closeModal} type="submit" />
+        </form>
+      </Modal>
+    </div>
   );
 };
 

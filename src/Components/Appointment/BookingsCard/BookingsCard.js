@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import AppointmentModal from "../AppointmentModal/AppointmentModal";
 
-const BookingsCard = ({ booking, openModal, closeModal }) => {
+const BookingsCard = ({ booking }) => {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <div className=" col-md-4 mb-3">
       <div class="card p-2 mb-5">
@@ -14,10 +24,15 @@ const BookingsCard = ({ booking, openModal, closeModal }) => {
           <button
             style={{ backgroundColor: " #1cc7c1", color: "white" }}
             className="btn text-uppercase fw-bold"
+            onClick={openModal}
           >
             Book Appointment
           </button>
-          <AppointmentModal openModal={openModal} closeModal={closeModal} />
+          <AppointmentModal
+            modalIsOpen={modalIsOpen}
+            closeModal={closeModal}
+            bookingName={booking.subject}
+          ></AppointmentModal>
         </div>
       </div>
     </div>
