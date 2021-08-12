@@ -65,7 +65,6 @@ const AppointmentModal = ({ modalIsOpen, closeModal, bookingName }) => {
           <input onClick={closeModal} type="submit" />
         </form>
       </Modal>
-      ???ksdjflas
     </div>
   );
 };
