@@ -37,32 +37,46 @@ const AppointmentModal = ({ modalIsOpen, closeModal, bookingName }) => {
         </h2>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <input
-            classname="form-control"
-            type="time"
-            placeholder="Select Time"
-            {...register("Select Time", { required: true, maxLength: 80 })}
-          />{" "}
+          <div className="form-group">
+            <input
+              classname="form-control"
+              type="time"
+              placeholder="Select Time"
+              {...register("Select Time", { required: true, maxLength: 80 })}
+            />
+          </div>
           <br />
-          <input
-            type="text"
-            placeholder="Your Name"
-            {...register("Your Name", { required: true, maxLength: 100 })}
-          />{" "}
+          <div className="form-group">
+            <input
+              className="form-control"
+              type="text"
+              placeholder="Your Name"
+              {...register("Your Name", { required: true, maxLength: 100 })}
+            />
+          </div>
           <br />
-          <input
-            type="tel"
-            placeholder="Mobile number"
-            {...register("Mobile number", { required: true, maxLength: 12 })}
-          />{" "}
+          <div className="form-group">
+            <input
+              type="tel"
+              className="form-control"
+              placeholder="Mobile number"
+              {...register("Mobile number", { required: true, maxLength: 12 })}
+            />
+          </div>
           <br />
-          <input
-            type="datetime"
-            placeholder="mm/dd/yy"
-            {...register("mm/dd/yy", { required: true })}
-          />
+          <div className="form-group">
+            <input
+              type="datetime"
+              className="form-control"
+              placeholder="mm/dd/yy"
+              {...register("mm/dd/yy", { required: true })}
+            />
+          </div>
+
           <br />
-          <input onClick={closeModal} type="submit" />
+          <div className="form-group">
+            <input onClick={closeModal} type="submit" />
+          </div>
         </form>
       </Modal>
     </div>
