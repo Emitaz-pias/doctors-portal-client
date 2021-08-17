@@ -36,7 +36,7 @@ const bookingsData = [
     id: 6,
     subject: "Teeth Orthodontics ",
     visitngHour: "8AM - 9AM",
-    totalSpace: "10 space Available",
+    totalSpace: "10 space Availabl",
   },
 ];
 
