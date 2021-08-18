@@ -1,0 +1,8 @@
+.customInput {
+  border: none !important;
+  border-bottom: 1px solid gray !important;
+}
+
+.customBtn {
+  background-color: #1cc7c1;
+}

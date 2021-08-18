@@ -1,5 +1,4 @@
 import React from "react";
-
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";
 
@@ -21,11 +20,14 @@ const AppointmentModal = ({ modalIsOpen, closeModal, bookingName }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    closeModal();
+  };
   console.log(errors);
 
   return (
-    <div>
+    <div className="modal-dialog modal-dialog-centered">
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -36,14 +38,16 @@ const AppointmentModal = ({ modalIsOpen, closeModal, bookingName }) => {
           {bookingName}
         </h2>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form classname="p-5" onSubmit={handleSubmit(onSubmit)}>
           <div className="form-group">
             <input
               classname="form-control"
               type="time"
               placeholder="Select Time"
-              {...register("Select Time", { required: true, maxLength: 80 })}
+              {...register("Time", { required: true, maxLength: 80 })}
             />
+            <br />
+            {errors.Time && <span className="text-danger">Please enter</span>}
           </div>
           <br />
           <div className="form-group">
@@ -51,8 +55,10 @@ const AppointmentModal = ({ modalIsOpen, closeModal, bookingName }) => {
               className="form-control"
               type="text"
               placeholder="Your Name"
-              {...register("Your Name", { required: true, maxLength: 100 })}
+              {...register("Name", { required: true, maxLength: 100 })}
             />
+            <br />
+            {errors.Name && <span className="text-danger">Please enter</span>}
           </div>
           <br />
           <div className="form-group">
@@ -60,8 +66,10 @@ const AppointmentModal = ({ modalIsOpen, closeModal, bookingName }) => {
               type="tel"
               className="form-control"
               placeholder="Mobile number"
-              {...register("Mobile number", { required: true, maxLength: 12 })}
+              {...register("Mobile", { required: true, maxLength: 12 })}
             />
+            <br />
+            {errors.Mobile && <span className="text-danger">Please enter</span>}
           </div>
           <br />
           <div className="form-group">
@@ -69,13 +77,15 @@ const AppointmentModal = ({ modalIsOpen, closeModal, bookingName }) => {
               type="datetime"
               className="form-control"
               placeholder="mm/dd/yy"
-              {...register("mm/dd/yy", { required: true })}
+              {...register("date", { required: true })}
             />
+            <br />
+            {errors.date && <span className="text-danger">Please enter</span>}
           </div>
 
           <br />
           <div className="form-group">
-            <input onClick={closeModal} type="submit" />
+            <input className="customBtn" type="submit" value="send " />
           </div>
         </form>
       </Modal>
